@@ -1,7 +1,9 @@
 import { Car, Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
+
 
 export function Footer() {
+  const naviagate = useNavigate()
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="container mx-auto px-4 py-12">
@@ -78,12 +80,11 @@ export function Footer() {
                 <a href="#" className="hover:text-blue-500 transition-colors">
                   Chauffeur Service
                 </a>
-
               </li>
               <li>
-                <a href="/dashboard" className="hover:text-blue-500 transition-colors">
+                < button onClick={() => naviagate('/dashboard')} className="hover:text-blue-500 transition-colors">
                   admin
-                </a>
+                </button>
               </li>
             </ul>
           </div>
